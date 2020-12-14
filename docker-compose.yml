@@ -33,7 +33,7 @@ services:
         volumes:
             - ./ontonotes-release-5.0:/data
             - ./ontonotes-release-5.0/tools/ontonotes-db-tool-v0.999b:/tool
-              # will write "yes" to /db/onto_db_initialed if tool build sucessfully
+              # will write "yes" to /db/onto_py_init if tool build sucessfully. `db-tool/load-data.sh` will use this file to judge whether mysql schema initial is needed.
             - db-data:/db
 
     static:
