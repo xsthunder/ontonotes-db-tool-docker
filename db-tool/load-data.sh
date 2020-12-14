@@ -11,7 +11,7 @@ then
     python on/tools/init_db.py --sense-inventories=english $my_db $my_server $my_name /data
     echo "yes " >$test_file
 else
-    echo "skip loading data"
+    echo "skip initializing data schema"
 fi
 
 # keep container running

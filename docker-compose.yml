@@ -8,11 +8,14 @@ services:
             - MYSQL_ALLOW_EMPTY_PASSWORD=yes
         volumes:
             - db-data:/var/lib/mysql
-        ports:
+
+        # uncomment this if you perfer using host python2 instead of db-tool
+        # ports:
+        
             # uncomment this if you perfer using host python2 instead of db-tool
             # - "127.0.0.1:3306:5000"
             
-            # or this listen on `0.0.0.0` while making your db server vulnerable. since the no password are provided for db's mysql
+            # or this, will listen on `0.0.0.0` while making your db server vulnerable. since the no password are provided for db's mysql
             # - "3306:5000"
 
     tool:
