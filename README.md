@@ -58,7 +58,7 @@ cd tool
 
 ## use host python2 instead of db-tool
 
-`conda.sh` is provided to create a db-tool env for host machine by anaconda. [Anaconda | The World's Most Popular Data Science Platform](https://www.anaconda.com/)
+[`conda.sh`](conda.sh) is provided to create a db-tool env for host machine by anaconda. [Anaconda | The World's Most Popular Data Science Platform](https://www.anaconda.com/)
 
 in this case, you need to expose the db service's 3306 port to the host. see [docker-compose.yml](docker-compose.yml) for detail.
 
