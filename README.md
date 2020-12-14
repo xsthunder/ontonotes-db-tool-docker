@@ -1,4 +1,4 @@
-# ontonotes-docker
+# ontonotes db tool docker
 
 One command to run ontonotes with docker! use ontotool with mysql5.0 without pain.
 
