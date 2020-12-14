@@ -1,0 +1,42 @@
+# [Compose file version 3 reference | Docker Documentation](https://docs.docker.com/compose/compose-file/#args)
+version: "3.3"
+services:
+    db:
+        image: reducible/mysql:5.0.95
+        environment:
+            - MYSQL_DATABASE=onto_db
+            - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+        volumes:
+            - db-data:/var/lib/mysql
+
+    tool:
+        build:
+            context: ./db-tool
+        environment:
+            - my_db=onto_db
+            - my_name=root
+            - my_server=db
+      # [Control startup and shutdown order in Compose | Docker Documentation](https://docs.docker.com/compose/startup-order/)
+        depends_on:
+            - "db"
+        command: ["sh", "/wait-for", "db:3306", "--", "sh", "load-data.sh"]
+
+        volumes:
+            - ./ontonotes-release-5.0:/data
+            - ./ontonotes-release-5.0/tools/ontonotes-db-tool-v0.999b:/tool
+              # will write "yes" to /db/onto_db_initialed if tool build sucessfully
+            - db-data:/db
+
+    static:
+        build:
+            context: ./static-server
+
+        volumes:
+            - ./ontonotes-release-5.0:/data
+        ports:
+            - "3222:5000"
+
+        command: ["serve", "/data"]
+
+volumes:
+    db-data:
