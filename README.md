@@ -70,5 +70,5 @@ no initial of onto mysql database is needed, since those steps are done by db-to
 
 ### wait-for
 
-[eficode/wait-for: ./wait-for is a script to wait for another service to become available.](https://github.com/eficode/wait-for)
-[Control startup and shutdown order in Compose | Docker Documentation](https://docs.docker.com/compose/startup-order/)
+- [eficode/wait-for: ./wait-for is a script to wait for another service to become available.](https://github.com/eficode/wait-for)
+- [Control startup and shutdown order in Compose | Docker Documentation](https://docs.docker.com/compose/startup-order/)
