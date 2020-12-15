@@ -70,8 +70,11 @@ no initial of onto mysql database is needed, since those steps are done by db-to
 
 ```
 docker exec -it ontonotes-db-tool-docker_db_1 mysql
+# in mysql
 show databases;
 use onto_db;
+show tables;
+select * from on_sense_type limit 5;
 ```
 
 ## ref
