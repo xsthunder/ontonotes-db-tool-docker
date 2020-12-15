@@ -1,4 +1,6 @@
 set -e
+set -x
+
 test_file=/db/onto_py_init
 
 if ! test -s $test_file
