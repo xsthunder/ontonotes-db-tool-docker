@@ -74,7 +74,7 @@ docker exec -it ontonotes-db-tool-docker_db_1 mysql
 show databases;
 use onto_db;
 show tables;
-select * from on_sense_type limit 5;
+select * from on_sense_type where lemma like "go"; # should have 16 rows
 ```
 
 ## ref
