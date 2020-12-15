@@ -64,6 +64,16 @@ in this case, you need to expose the db service's 3306 port to the host. see [do
 
 no initial of onto mysql database is needed, since those steps are done by db-tool. see [db-tool/load-data.sh](db-tool/load-data.sh) for detail.
 
+## login to db
+
+`onto_db` is our db. see [`docker-compose.yml` service db environment ](docker-compose.yml) for detail.
+
+```
+docker exec -it ontonotes-db-tool-docker_db_1 mysql
+show databases;
+use onto_db;
+```
+
 ## ref
 
 [Compose file version 3 reference](https://docs.docker.com/compose/compose-file/#depends_on)
