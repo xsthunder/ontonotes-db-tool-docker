@@ -45,11 +45,11 @@ cd <this_repo>
 docker-compose up
 ```
 
-static web of `ontonotes-release-5.0 ` are hosted on http://0.0.0.0:3222 or http://docker-machine:3222. map docker-machine to ip at your hosts.
+static web of `ontonotes-release-5.0 ` are hosted on http://0.0.0.0:3222 or http://docker-machine:3222 (map `docker-machine` to ip at your hosts first).
 
 ## login into ontonotes db-tool for manipulating onto-db
 
-see http://0.0.0.0:3222/tools/ontonotes-db-tool-v0.999b/doc/html/ or  http://docker-machine:3222/tools/ontonotes-db-tool-v0.999b/doc/html/ for tool doc. refer to [db-tool/load-data.sh](db-tool/load-data.sh) for my_db, my_server, my_name, and onto-repo setting.
+see http://0.0.0.0:3222/tools/ontonotes-db-tool-v0.999b/doc/html/ or  http://docker-machine:3222/tools/ontonotes-db-tool-v0.999b/doc/html/ (map `docker-machine` to ip at your hosts first) for tool doc. refer to [db-tool/load-data.sh](db-tool/load-data.sh) for my_db, my_server, my_name, and onto-repo setting.
 
 ```
 docker exec -it ontonotes-db-tool-docker_tool_1 sh
