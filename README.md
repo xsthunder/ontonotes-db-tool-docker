@@ -79,7 +79,8 @@ select * from on_sense_type where lemma like "go"; # should have 16 rows in set
 
 ## ref
 
-[Compose file version 3 reference](https://docs.docker.com/compose/compose-file/#depends_on)
+= [Compose file version 3 reference](https://docs.docker.com/compose/compose-file/#depends_on)
+- [Dockerfile reference | Docker Documentation](https://docs.docker.com/engine/reference/builder/#usage)
 
 ### wait-for
 
