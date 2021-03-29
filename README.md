@@ -4,7 +4,7 @@ One command to run ontonotes with docker! use ontotool with mysql5.0 without pai
 
 ## feature
 
-1. database initial is done for you and frames or sense inventories of English is loaded in [`db-tool/load-data.sh`](db-tool/load-data.sh).
+1. database initial will be done for you and frames or sense inventories of English will be loaded in [`db-tool/load-data.sh`](db-tool/load-data.sh).
 2. persist mysql data with docker volume. see [`docker-compose.yml` db-data](docker-compose.yml) for detail.
 3. python2 env with Mysql-python is provided for quick start. see [login into ontonotes db-tool for manipulating onto-db](#login-into-ontonotes-db-tool-for-manipulating-onto-db) for detail.
 
